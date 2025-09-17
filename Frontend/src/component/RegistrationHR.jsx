@@ -57,21 +57,38 @@ export const RegisterHR = function() {
 
     return (
         <form onSubmit={handleSubmit} className="userform">
-            <input type="text" name="name" placeholder="Full Name" value={formData.name} onChange={handleChange} required />
-            <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} required />
-            <input type="password" name="password" placeholder="Password" value={formData.password} onChange={handleChange} required />
+            <h1 style={{display:"flex", justifyContent:"center", fontSize:"2rem", fontWeight:"700", textDecoration:"underline"}}>HR Registration</h1>
+            <label style={{color:"white", marginLeft:"7px", marginBottom:"-5px"}}>Full Name</label>
+<input type="text" name="name" placeholder="Full Name" value={formData.name} onChange={handleChange} required />
 
-            <input type="text" name="companyName" placeholder="Company Name" value={formData.companyName} onChange={handleChange} required />
-            <input type="text" name="companyWebsite" placeholder="Company Website" value={formData.companyWebsite} onChange={handleChange} />
+<label style={{color:"white", marginLeft:"7px", marginBottom:"-5px"}}>Email</label>
+<input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} required />
 
-            <input type="text" name="designation" placeholder="Designation" value={formData.designation} onChange={handleChange} required />
-            <input type="text" name="department" placeholder="Department" value={formData.department} onChange={handleChange} required />
-            <input type="text" name="industryType" placeholder="Industry Type" value={formData.industryType} onChange={handleChange} required />
-            <input type="text" name="officeLocation" placeholder="Office Location" value={formData.officeLocation} onChange={handleChange} required />
+<label style={{color:"white", marginLeft:"7px", marginBottom:"-5px"}}>Password</label>
+<input type="password" name="password" placeholder="Password" value={formData.password} onChange={handleChange} required />
+
+<label style={{color:"white", marginLeft:"7px", marginBottom:"-5px"}}>Company Name</label>
+<input type="text" name="companyName" placeholder="Company Name" value={formData.companyName} onChange={handleChange} required />
+
+<label style={{color:"white", marginLeft:"7px", marginBottom:"-5px"}}>Company Website</label>
+<input type="text" name="companyWebsite" placeholder="Company Website" value={formData.companyWebsite} onChange={handleChange} />
+
+<label style={{color:"white", marginLeft:"7px", marginBottom:"-5px"}}>Designation</label>
+<input type="text" name="designation" placeholder="Designation" value={formData.designation} onChange={handleChange} required />
+
+<label style={{color:"white", marginLeft:"7px", marginBottom:"-5px"}}>Department</label>
+<input type="text" name="department" placeholder="Department" value={formData.department} onChange={handleChange} required />
+
+<label style={{color:"white", marginLeft:"7px", marginBottom:"-5px"}}>Industry Type</label>
+<input type="text" name="industryType" placeholder="Industry Type" value={formData.industryType} onChange={handleChange} required />
+
+<label style={{color:"white", marginLeft:"7px", marginBottom:"-5px"}}>Office Location</label>
+<input type="text" name="officeLocation" placeholder="Office Location" value={formData.officeLocation} onChange={handleChange} required />
+
 
             {error && <p style={{ color: "red" }}>{error}</p>}
 
-            <button type="submit">Register HR</button>
+            <button type="submit" style={{width:"490px"}}>Register HR</button>
         </form>
     );
 };

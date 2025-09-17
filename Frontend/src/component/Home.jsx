@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AnimatedTooltipPreview } from './AnimatedTooltipPreview';
 import { MovingBorder } from '../../components/ui/moving-border';
+import { MovingBorderDemo } from './MovingBorderDemo';
 
 // A component to inject all the necessary CSS into the document's head.
 
@@ -78,7 +79,7 @@ const Header = ()=>{
 const Hero = () => (
     
     <section className="hero">
-        <MovingBorder />
+        {/* <MovingBorderDemo /> */}
         <div className="container" style={{marginTop:"20px"}}>
             <h1>Search, Apply & Get your 
                 <br />
@@ -218,32 +219,64 @@ const AIGenerator = () => {
 };
 
 const Features = () => (
-    <section id="features" className="section" style={{backgroundColor: 'var(--white)'}}>
+    <section id="features" className="section" style={{ backgroundColor: 'var(--white)' }}>
         <div className="container">
             <div className="section-header">
                 <h2>Why Choose Us?</h2>
-                <p>Everything you need to launch and grow your business.</p>
+                <p>AI-powered tools to accelerate your career growth and streamline opportunities.</p>
             </div>
+
             <div className="features-grid">
                 <div className="feature-card">
-                    <div className="feature-icon-wrapper"><LightningIcon /></div>
-                    <h3>Lightning Fast</h3>
-                    <p>Our platform is optimized for speed and performance, ensuring a great user experience.</p>
+                    <h3>AI Career Guidance</h3>
+                    <p>Personalized advice for students, mentors, and HR professionals to achieve their goals.</p>
                 </div>
+
                 <div className="feature-card">
-                    <div className="feature-icon-wrapper"><SecurityIcon /></div>
-                    <h3>Rock-Solid Security</h3>
-                    <p>Your data is safe with us. We use industry-standard encryption and security practices.</p>
+                    <h3>AI Internship Recommendations</h3>
+                    <p>Receive 3–5 tailored internship suggestions based on your skills and aspirations.</p>
                 </div>
+
                 <div className="feature-card">
-                    <div className="feature-icon-wrapper"><SupportIcon /></div>
-                    <h3>24/7 Support</h3>
-                    <p>Our support team is always available to help you with any questions or issues.</p>
+                    <h3>AI Resume Analyzer</h3>
+                    <p>Get instant feedback and actionable improvements for your resume.</p>
                 </div>
+
+                <div className="feature-card">
+                    <h3>AI Interview Prep</h3>
+                    <p>Practice with mock questions and build confidence before your interviews.</p>
+                </div>
+
+                <div className="feature-card">
+                    <h3>Skill Gap Analysis</h3>
+                    <p>Identify missing skills and get learning suggestions to stay ahead.</p>
+                </div>
+
+                <div className="feature-card">
+                    <h3>Mentorship Support</h3>
+                    <p>Engage in chat or video calls with mentors and receive ratings for guidance.</p>
+                </div>
+
+                <div className="feature-card">
+                    <h3>HR Tools</h3>
+                    <p>Post internships, review applications, and conduct interviews seamlessly.</p>
+                </div>
+
+                <div className="feature-card">
+                    <h3>Automated Notifications</h3>
+                    <p>Stay updated with real-time alerts on applications and mentor assignments.</p>
+                </div>
+
+                <div className="feature-card">
+                    <h3>Secure User Management</h3>
+                    <p>Manage profiles, onboarding, and password resets with enterprise-grade security.</p>
+                </div>
+
             </div>
         </div>
     </section>
 );
+
 
 const Footer = () => (
   <footer

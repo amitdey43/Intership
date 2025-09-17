@@ -86,35 +86,57 @@ export const RegisterMentor = function(){
     }
 
     return (
+        
         <form onSubmit={handleSubmit} className="userform">
+
+            <h1 style={{display:"flex", justifyContent:"center", fontSize:"2rem", fontWeight:"700", textDecoration:"underline"}}>Mentor Registration</h1>
+
+            <label style={{color:"white", marginLeft:"7px", marginBottom:"-5px"}}>Enter your name </label>
             <input type="text" name="name" placeholder="Full Name" value={formData.name} onChange={handleChange} required />
+          
+            <label style={{color:"white", marginLeft:"7px", marginBottom:"-5px"}}>Enter your email </label>
             <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} required />
+
+            <label style={{color:"white", marginLeft:"7px", marginBottom:"-5px"}}>Enter password </label>
             <input type="password" name="password" placeholder="Password" value={formData.password} onChange={handleChange} required />
             
+            <label style={{color:"white", marginLeft:"7px", marginBottom:"-5px"}}>Profile pic </label>
             <input type="file" name="profilePic" accept="image/*" id="profile"required onChange={handleChange}/>
 
+            <label style={{color:"white", marginLeft:"7px", marginBottom:"-5px"}}>Enter your phone no </label>
             <input type="text" name="phone" placeholder="Phone" value={formData.phone} onChange={handleChange} required />
-            <input type="text" name="designation" placeholder="Designation" value={formData.designation} onChange={handleChange} required />
-            <input type="text" name="organization" placeholder="Organization" value={formData.organization} onChange={handleChange} required />
-            
-            <div> 
-                <input type="text" value={expertiseInput} placeholder="Add expertise" onChange={(e) => setExpertiseInput(e.target.value)} />
-                <button type="button" onClick={addExpertise}>Add</button>
-                <div>
-                {formData.expertiseAreas.map((item, index) => (
-                    <span key={index}>
-                    {item} <button type="button" onClick={() => removeExpertise(index)}>x</button>
-                    </span>
-                ))}
-                </div>
-            </div>
 
-            <input type="number" name="experienceYears" placeholder="Experience Years" value={formData.experienceYears} onChange={handleChange} />
-            <input type="text" name="linkedIn" placeholder="LinkedIn URL" value={formData.linkedIn} onChange={handleChange} />
-            <textarea name="bio" placeholder="Short bio" value={formData.bio} onChange={handleChange} />
+            <label style={{color:"white", marginLeft:"7px", marginBottom:"-5px"}}>Designation</label>
+<input type="text" name="designation" placeholder="Designation" value={formData.designation} onChange={handleChange} required />
+
+<label style={{color:"white", marginLeft:"7px", marginBottom:"-5px"}}>Organization</label>
+<input type="text" name="organization" placeholder="Organization" value={formData.organization} onChange={handleChange} required />
+            
+<div> 
+    <label style={{color:"white", marginLeft:"7px", marginBottom:"10px"}}>Expertise Areas</label>
+    <input type="text" value={expertiseInput} placeholder="Add expertise" onChange={(e) => setExpertiseInput(e.target.value)} />
+    <button type="button" onClick={addExpertise} style={{width:"490px"}}>Add</button>
+    <div>
+        {formData.expertiseAreas.map((item, index) => (
+            <span key={index}>
+                {item} <button type="button" onClick={() => removeExpertise(index)}>x</button>
+            </span>
+        ))}
+    </div>
+</div>
+
+<label style={{color:"white", marginLeft:"7px", marginBottom:"-5px"}}>Experience (Years)</label>
+<input type="number" name="experienceYears" placeholder="Experience Years" value={formData.experienceYears} onChange={handleChange} />
+
+<label style={{color:"white", marginLeft:"7px", marginBottom:"-5px"}}>LinkedIn Profile</label>
+<input type="text" name="linkedIn" placeholder="LinkedIn URL" value={formData.linkedIn} onChange={handleChange} />
+
+<label style={{color:"white", marginLeft:"7px", marginBottom:"-5px"}}>Short Bio</label>
+<textarea name="bio" placeholder="Short bio" value={formData.bio} onChange={handleChange} style={{width:"490px"}}/>
+
 
              {error && <p>{error}</p>}   
-            <button type="submit">Register Mentor</button>
+            <button type="submit" style={{width:"490px"}}>Register Mentor</button>
         </form>
     );
 }
